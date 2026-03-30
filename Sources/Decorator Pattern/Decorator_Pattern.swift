@@ -8,3 +8,5 @@ struct Decorator_Pattern {
         cannon.shoot("east")
     }
 }
+
+extension Cannon: Shootable {}
