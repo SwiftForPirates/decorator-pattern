@@ -16,6 +16,12 @@ struct Decorator_Pattern {
         cannon.shoot("east")
         cannon.shoot("north")
 
+        let pistol = Pistol().trackingShots(with: tracker)
+        let musket = Musket().trackingShots(with: tracker)
+
+        pistol.shoot("south")
+        musket.shoot("west")
+
         print("Fired shots: \(tracker.firedShots)")
     }
 }
