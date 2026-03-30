@@ -18,8 +18,10 @@ class Cannon {
 
     func shoot(_ direction: String) {
         highBell.ring()
+        highBell.ring()
         print("Shooting cannon to the \(direction). Boom!")
         tracker.shotFired()
+        lowBell.ring()
         lowBell.ring()
     }
 }
