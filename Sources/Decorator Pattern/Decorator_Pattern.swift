@@ -4,5 +4,7 @@
 @main
 struct Decorator_Pattern {
     static func main() {
+        let cannon = Cannon()
+        cannon.shoot("east")
     }
 }
