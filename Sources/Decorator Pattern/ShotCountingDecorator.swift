@@ -7,12 +7,15 @@
 
 class ShotCountingDecorator: Shootable {
     private let decoratee: Shootable
+    private let tracker: ShotTracker
 
-    init(decoratee: Shootable) {
+    init(decoratee: Shootable, tracker: ShotTracker) {
         self.decoratee = decoratee
+        self.tracker = tracker
     }
 
     func shoot(_ direction: String) {
         decoratee.shoot(direction)
+        tracker.shotFired()
     }
 }
