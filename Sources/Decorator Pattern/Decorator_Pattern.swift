@@ -4,11 +4,7 @@
 @main
 struct Decorator_Pattern {
     static func main() {
-        let tracker = ShotTracker()
-        let cannon = Cannon(tracker: tracker, highBell: HighBell(), lowBell: LowBell())
-
+        let cannon = Cannon()
         cannon.shoot("east")
-
-        print("Fired shots: \(tracker.firedShots)")
     }
 }
