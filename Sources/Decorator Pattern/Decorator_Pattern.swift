@@ -11,6 +11,7 @@ struct Decorator_Pattern {
         let cannon = Cannon()
             .trackingShots(with: tracker)
             .ringingBells(high: highBell, low: lowBell)
+            .ringingBells(high: highBell, low: lowBell)
 
         cannon.shoot("east")
         cannon.shoot("north")
