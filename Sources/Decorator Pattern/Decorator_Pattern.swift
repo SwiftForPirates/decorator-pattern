@@ -5,14 +5,12 @@
 struct Decorator_Pattern {
     static func main() {
         let tracker = ShotTracker()
-        let cannon = BellDecorator(
-            decoratee: ShotCountingDecorator(
-                decoratee: Cannon(),
-                tracker: tracker
-            ),
-            highBell: HighBell(),
-            lowBell: LowBell()
-        )
+        let highBell = HighBell()
+        let lowBell = LowBell()
+
+        let cannon = Cannon()
+            .trackingShots(with: tracker)
+            .ringingBells(high: highBell, low: lowBell)
 
         cannon.shoot("east")
         cannon.shoot("north")
