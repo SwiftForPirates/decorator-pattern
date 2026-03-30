@@ -21,3 +21,5 @@ struct Decorator_Pattern {
 }
 
 extension Cannon: Shootable {}
+extension Pistol: Shootable {}
+extension Musket: Shootable {}
